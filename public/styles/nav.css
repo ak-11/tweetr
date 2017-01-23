@@ -1,0 +1,24 @@
+#nav-bar {
+  /*background-color: rgb(26, 188, 156);*/
+  background-color: #00a087;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  color: #e8fdff;
+  padding: 0 2em;
+  font-size: 2em;
+
+}
+
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#nav-bar .header {
+  /*color: rgb (255, 255, 255);*/
+  margin-left: -10px;
+  line-height: 2.5;
+}

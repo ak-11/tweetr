@@ -18,6 +18,15 @@ body {
   margin: 0;
   color: #244751;
   background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+  width: 520px;
+  /*margin: 85px auto 0 auto;*/
+  margin: 0 auto;
+  padding-top: 100px;
+  background-color: white;
 }
 
 /*
