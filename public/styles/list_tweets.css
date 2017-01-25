@@ -14,6 +14,7 @@ article.tweet {
   margin: 2em;
   color: grey;
   overflow: hidden;
+  opacity: 0.5;
 }
 article.tweet img {
   width: 50px;
@@ -25,6 +26,14 @@ article.tweet img {
 article.tweet:hover {
   border-color: rgb(52, 73, 94);
   color: black;
+  opacity: 1;
+}
+
+article.tweet:hover img {
+  opacity: 1;
+}
+
+article.tweet:hover .icon {
   opacity: 1;
 }
 
@@ -46,19 +55,11 @@ article.tweet footer span {
   margin-left: auto;
 }
 
-article.tweet footer i {
-  opacity: 0;
+article.tweet footer .icon {
   color: #00a087;
   margin-left: auto;
   padding: 0 5px;
-}
-
-/*article.tweet footer i:hover {
-  opacity: 1;
-}*/
-
-.hover {
-  opacity:1;
+  opacity: 0;
 }
 
 article.tweet .username {
