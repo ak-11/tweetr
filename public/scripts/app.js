@@ -51,26 +51,11 @@ const renderTweets = (tweets) => {
   })
 }
 
-// Shortcut for document on ready
-// $(function () {
-//
-// })
-// renderTweets(data)
-$(document).ready(() => {
-  $('#new-tweet-submit').on('submit', function(){
+// Shortcut for writing document on ready
+$(() => {
+  // renderTweets(data)
+  $('#new-tweet-submit').on('submit', () => {
     event.preventDefault;
-    // Send form data and serialize it
     $.post('/tweets', $('#tweet-form').serialize());
-
-    // let content = $('#new-tweet').val();
-    // let date = Date.now();
-    // $.post('/tweets', {
-    //   'content': {
-    //     'text': content
-    //     }
-    // }).done(function(data) {
-    //   console.log("Success! Here is the data:", data);
-    // })
-
   })
 })
