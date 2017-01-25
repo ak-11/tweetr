@@ -46,11 +46,12 @@ const createTweetElement = (tweet) => {
 
 const renderTweets = (tweets) => {
   tweets.forEach((tweet) => {
-    $('#tweets-container').append(createTweetElement(tweet))
+    $('#tweets-container').prepend(createTweetElement(tweet))
   })
 }
 
 const loadTweets = () => {
+  // $('#new-tweet').hide()
   $('#tweets-container').empty()
   $.ajax({
     url: '/tweets',
@@ -59,14 +60,32 @@ const loadTweets = () => {
   });
 }
 
+const validateTweet = (tweet) => {
+  if (tweet === '' || tweet === null) {
+    return $('#null-warning').slideDown(function() {
+        setTimeout(function() {
+            $('#null-warning').slideUp();
+        }, 3000);
+    });
+  } else if (tweet.length > 140) {
+    return $('#limit-warning').slideDown(function() {
+        setTimeout(function() {
+            $('#limit-warning').slideUp();
+        }, 3000);
+    });
+  } else {
+    return $.post('/tweets', $('#tweet-form').serialize()).done(loadTweets);
+  }
+}
+
 // Shortcut for writing document on ready
 $(() => {
+  $('#compose').hide()
   loadTweets();
-  // submit event handler can't be used for preventDefault
-  // $('#new-tweet-submit').on('submit', (event) => {
-  //   $event.target.preventDefault();
   $('#new-tweet-submit').on('click',(event) => {
     event.preventDefault();
+    let text = $('#new-tweet').val()
+    // validateTweet(text)
     $.post('/tweets', $('#tweet-form').serialize()).done(loadTweets);
   })
 })

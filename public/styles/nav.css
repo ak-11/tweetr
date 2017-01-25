@@ -2,23 +2,46 @@
   /*background-color: rgb(26, 188, 156);*/
   background-color: #00a087;
   position: fixed;
-  height: 80px;
+  height: 90px;
   width: 100%;
   color: #e8fdff;
   padding: 0 2em;
   font-size: 2em;
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #nav-bar .logo {
   height: 80px;
   width: 80px;
   margin-right: 10px;
-  vertical-align: middle;
+  margin-left: 100px;
+  /*vertical-align: middle;*/
 }
 
 #nav-bar .header {
   /*color: rgb (255, 255, 255);*/
   margin-left: -10px;
-  line-height: 2.5;
+  font-size: larger;
+}
+
+#nav-bar #compose-button {
+  border: 1px solid black;
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 60px;
+  background-color: lightcyan;
+  color: #00a087;
+  font-weight: 400;
+  font-size: x-large;
+  margin-right: 100px;
+  padding: 10px;
+}
+
+#nav-bar #compose-button:hover {
+  background-color: white;
+  color: black;
 }

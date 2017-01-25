@@ -44,3 +44,8 @@
 .character-limit-warning {
   color: red;
 }
+
+main .warning {
+  color: red;
+  display: none;
+}
