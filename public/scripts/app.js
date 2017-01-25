@@ -22,23 +22,22 @@ const calculatePostDate = (postDate) => {
 }
 
 const createTweetElement = (tweet) => {
- let td = tweet
- let postDate = calculatePostDate(td.created_at)
+ let postDate = calculatePostDate(tweet.created_at)
  let $tweet = `<article class="tweet">
    <header>
-     <img src="${escape(td.user.avatars.small)}">
-     <h2 class="username">${escape(td.user.name)}</h2>
-     <h5 class="handle">${escape(td.user.handle)}</h5>
+     <img src="${tweet.user.avatars.small}">
+     <h2 class="username">${escape(tweet.user.name)}</h2>
+     <h5 class="handle">${escape(tweet.user.handle)}</h5>
    </header>
    <div class="tweet-content">
-     ${escape(td.content)}
+     ${escape(tweet.content.text)}
    </div>
    <footer>
+    <div class="post-date">${escape(postDate)}</div>
     <span>
-     <div class="post-date">${escape(postDate)}</div>
-     <i class="fa fa-flag" aria-hidden="true"></i>
-     <i class="fa fa-retweet" aria-hidden="true"></i>
-     <i class="fa fa-heart" aria-hidden="true"></i>
+      <i class="fa fa-flag icon" aria-hidden="true"></i>
+      <i class="fa fa-retweet icon" aria-hidden="true"></i>
+      <i class="fa fa-heart icon" aria-hidden="true"></i>
     </span>
    </footer>
  </article>`
@@ -47,15 +46,27 @@ const createTweetElement = (tweet) => {
 
 const renderTweets = (tweets) => {
   tweets.forEach((tweet) => {
-    $( '#tweets-container').append(createTweetElement(tweet))
+    $('#tweets-container').append(createTweetElement(tweet))
   })
+}
+
+const loadTweets = () => {
+  $('#tweets-container').empty()
+  $.ajax({
+    url: '/tweets',
+  }).done((data) => {
+    renderTweets(data)
+  });
 }
 
 // Shortcut for writing document on ready
 $(() => {
-  // renderTweets(data)
-  $('#new-tweet-submit').on('submit', () => {
-    event.preventDefault;
-    $.post('/tweets', $('#tweet-form').serialize());
+  loadTweets();
+  // submit event handler can't be used for preventDefault
+  // $('#new-tweet-submit').on('submit', (event) => {
+  //   $event.target.preventDefault();
+  $('#new-tweet-submit').on('click',(event) => {
+    event.preventDefault();
+    $.post('/tweets', $('#tweet-form').serialize()).done(loadTweets);
   })
 })

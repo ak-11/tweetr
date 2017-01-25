@@ -49,34 +49,15 @@
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form id="tweet-form"action="/tweets" method="post">
+        <form id="tweet-form" action="/tweets" method="post">
           <textarea name="text" id="new-tweet" placeholder="What are you humming about?"></textarea>
           <input id="new-tweet-submit" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
 
-
-      <article class="tweet">
-        <header>
-          <img src="http://www.aureusknights.com/image.php?u=9779&dateline=1414827203">
-          <h2 class="username">Username</h2>
-          <h5 class="handle">@Yourmom</h5>
-        </header>
-        <div class="tweet-content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad min
-        </div>
-        <footer>
-          <div class="post-date">
-            Posted x Days Ago
-          </div>
-          <span>
-            <i class="fa fa-flag icon" aria-hidden="true"></i>
-            <i class="fa fa-retweet icon" aria-hidden="true"></i>
-            <i class="fa fa-heart icon" aria-hidden="true"></i>
-          </span>
-        </footer>
-      </article>
+      <div id="tweets-container">
+      </div>
     </main>
   </body>
 </html>

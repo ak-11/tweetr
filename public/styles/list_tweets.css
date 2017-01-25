@@ -1,4 +1,4 @@
-article.tweet header {
+#tweets-container article.tweet header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,7 +8,7 @@ article.tweet header {
   background-color: rgb(236, 240, 241);
 }
 
-article.tweet {
+#tweets-container article.tweet {
   border: 1px solid grey;
   border-radius: 3px;
   margin: 2em;
@@ -16,64 +16,64 @@ article.tweet {
   overflow: hidden;
   opacity: 0.5;
 }
-article.tweet img {
+#tweets-container article.tweet img {
   width: 50px;
   height: 50px;
   margin: 0 10px;
   opacity: 0.5;
 }
 
-article.tweet:hover {
+#tweets-container article.tweet:hover {
   border-color: rgb(52, 73, 94);
   color: black;
   opacity: 1;
 }
 
-article.tweet:hover img {
+#tweets-container article.tweet:hover img {
   opacity: 1;
 }
 
-article.tweet:hover .icon {
+#tweets-container article.tweet:hover .icon {
   opacity: 1;
 }
 
-article.tweet footer {
+#tweets-container article.tweet footer {
   border-top: 1px solid grey;
   height: 2em;
   display: flex;
 }
 
-article.tweet footer .post-date {
+#tweets-container article.tweet footer .post-date {
   align-self: center;
   margin-left: 5px;
 }
 
-article.tweet footer span {
+#tweets-container article.tweet footer span {
   display: flex;
   flex-direction: row;
   align-self: center;
   margin-left: auto;
 }
 
-article.tweet footer .icon {
+#tweets-container article.tweet footer .icon {
   color: #00a087;
   margin-left: auto;
   padding: 0 5px;
   opacity: 0;
 }
 
-article.tweet .username {
+#tweets-container article.tweet .username {
   margin-bottom: 40px;
 }
 
-article.tweet .handle {
+#tweets-container article.tweet .handle {
   font-weight: 400;
   margin-left: auto;
   padding-right: 10px;
   padding-bottom: 20px;
 }
 
-article.tweet .tweet-content {
+#tweets-container article.tweet .tweet-content {
   padding: 10px;
   width: 100%;
   margin-bottom: 10px;
