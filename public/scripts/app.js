@@ -11,9 +11,10 @@ const escape = (str) => {
 
 const calculatePostDate = (postDate) => {
   let present = Date.now()
-  let past = postDate
-  let days = Math.floor((present - past) / 86400000)
-  if (days <= 1) {
+  let days = Math.floor((present - postDate) / 86400000)
+  if (days < 1) {
+    return `Posted today`
+  } else if (days <= 1) {
     return `Posted ${days} day ago`;
   } else {
     return `Posted ${days} day's ago`;
@@ -50,6 +51,10 @@ const renderTweets = (tweets) => {
   })
 }
 
+// Shortcut for document on ready
+// $(function () {
+//
+// })
 $(document).ready(() => {
   renderTweets(data)
 })
