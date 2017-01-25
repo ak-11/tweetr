@@ -1,3 +1,5 @@
+
+
 .new-tweet {
   display: flex;
   flex-direction: row;
@@ -8,18 +10,12 @@
   margin: 0 2em;
   border: 1px solid #bdc3c7;
   border-radius: 5px;
-  /*flex: auto;*/
-  /*flex-flow: row || wrap;*/
-  /*border: 1px solid black;*/
-  /*position: relative;*/
-  /*background-color: rgb(236, 240, 241);*/
 }
 
 .new-tweet h2 {
   border-bottom: 1px solid #34495e;
   width: 100%;
   margin-top: 5px;
-  /*order: 1;*/
 }
 
 .new-tweet form {
@@ -33,13 +29,11 @@
   padding: 5px;
   width: 100%;
   margin-bottom: 10px;
-  /*order: 2;*/
+  height: 90px;
 }
 
 .new-tweet form input {
   align-self: center;
-  /*display: block;*/
-  /*order: 3;*/
 }
 
 .new-tweet form span {
@@ -47,11 +41,6 @@
   align-self: center;
   margin-left: auto;
   font-style: italic;
-  /*margin-left: 250px;*/
-  /*position: absolute;*/
-  /*right: 5px;
-  bottom: 7px;*/
-  /*order 4;*/
 }
 
 .character-limit-warning {

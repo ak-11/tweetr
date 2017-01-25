@@ -1,8 +1,8 @@
 
 $(document).ready(() => {
-  $('#new-tweet').on('input', (e) => {
-    let characterCount = 140 - $(e.target).val().length
-    $(e.target).siblings('.counter')
+  $('#new-tweet').on('input', (event) => {
+    let characterCount = 140 - $(event.target).val().length
+    $(event.target).siblings('.counter')
       .text(characterCount)
       .toggleClass('character-limit-warning', characterCount < 0)
   })
