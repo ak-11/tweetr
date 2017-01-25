@@ -55,6 +55,22 @@ const renderTweets = (tweets) => {
 // $(function () {
 //
 // })
+// renderTweets(data)
 $(document).ready(() => {
-  renderTweets(data)
+  $('#new-tweet-submit').on('submit', function(){
+    event.preventDefault;
+    // Send form data and serialize it
+    $.post('/tweets', $('#tweet-form').serialize());
+
+    // let content = $('#new-tweet').val();
+    // let date = Date.now();
+    // $.post('/tweets', {
+    //   'content': {
+    //     'text': content
+    //     }
+    // }).done(function(data) {
+    //   console.log("Success! Here is the data:", data);
+    // })
+
+  })
 })

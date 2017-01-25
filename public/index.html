@@ -34,8 +34,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/hover.js"></script>
   </head>
 
   <body>
@@ -51,9 +49,9 @@
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets" method="post">
+        <form id="tweet-form"action="/tweets" method="post">
           <textarea name="text" id="new-tweet" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <input id="new-tweet-submit" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
@@ -72,10 +70,10 @@
           <div class="post-date">
             Posted x Days Ago
           </div>
-          <span id="icons">
-            <i class="fa fa-flag" aria-hidden="true"></i>
-            <i class="fa fa-retweet" aria-hidden="true"></i>
-            <i class="fa fa-heart" aria-hidden="true"></i>
+          <span>
+            <i class="fa fa-flag icon" aria-hidden="true"></i>
+            <i class="fa fa-retweet icon" aria-hidden="true"></i>
+            <i class="fa fa-heart icon" aria-hidden="true"></i>
           </span>
         </footer>
       </article>
