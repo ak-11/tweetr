@@ -1,8 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 const escape = (str) => {
  let div = document.createElement('div');
  div.appendChild(document.createTextNode(str));
@@ -52,6 +47,7 @@ const renderTweets = (tweets) => {
 
 const loadTweets = () => {
   $('.warning').hide()
+  $('#new-tweet').val('')
   $('#tweets-container').empty()
   $.ajax({
     url: '/tweets',
@@ -65,7 +61,6 @@ const validateTweet = (tweet) => {
   if (tweet.length > 140) return '#limit-warning'
   return true;
 }
-
 // Shortcut for writing document on ready
 $(() => {
   $('#compose').hide()

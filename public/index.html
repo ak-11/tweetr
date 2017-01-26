@@ -31,10 +31,10 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
-    <!-- App JS -->
+    <!-- Character Counter JS -->
     <script type="text/javascript" src="/scripts/compose-char-counter.js"></script>
 
-    <!-- App JS -->
+    <!-- Form toggle JS -->
     <script type="text/javascript" src="/scripts/toggle-form.js"></script>
 
   </head>
@@ -46,8 +46,7 @@
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
       <button type="button" id="compose-button">
-        <i class="fa fa-pencil-square-o" aria-hidden="true">
-        </i>
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         Compose
       </button>
     </nav>
@@ -64,7 +63,7 @@
           It appears you forgot to write a tweet. Please try again.
         </h2>
       </div>
-
+      <!-- Form to compose new tweets -->
       <section class="new-tweet" id="compose">
         <h2>Compose Tweet</h2>
         <form id="tweet-form" action="/tweets" method="post">
@@ -73,7 +72,7 @@
           <span class="counter">140</span>
         </form>
       </section>
-
+      <!-- Container to display tweets -->
       <div id="tweets-container">
       </div>
     </main>
