@@ -19,7 +19,7 @@ module.exports = function makeDataHelpers(db) {
         if (err) {
           return console.error(err);
         }
-        callback(null, result)
+        callback(null, result);
         db.close;
       })
     }
