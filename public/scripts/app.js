@@ -51,7 +51,7 @@ const renderTweets = (tweets) => {
 }
 
 const loadTweets = () => {
-  // $('#new-tweet').hide()
+  $('.warning').hide()
   $('#tweets-container').empty()
   $.ajax({
     url: '/tweets',
@@ -61,21 +61,9 @@ const loadTweets = () => {
 }
 
 const validateTweet = (tweet) => {
-  if (tweet === '' || tweet === null) {
-    return $('#null-warning').slideDown(function() {
-        setTimeout(function() {
-            $('#null-warning').slideUp();
-        }, 3000);
-    });
-  } else if (tweet.length > 140) {
-    return $('#limit-warning').slideDown(function() {
-        setTimeout(function() {
-            $('#limit-warning').slideUp();
-        }, 3000);
-    });
-  } else {
-    return $.post('/tweets', $('#tweet-form').serialize()).done(loadTweets);
-  }
+  if (tweet === '' || tweet === null) return '#null-warning'
+  if (tweet.length > 140) return '#limit-warning'
+  return true;
 }
 
 // Shortcut for writing document on ready
@@ -85,7 +73,10 @@ $(() => {
   $('#new-tweet-submit').on('click',(event) => {
     event.preventDefault();
     let text = $('#new-tweet').val()
-    // validateTweet(text)
-    $.post('/tweets', $('#tweet-form').serialize()).done(loadTweets);
+    if (validateTweet(text) === true) {
+      $.post('/tweets', $('#tweet-form').serialize()).done(loadTweets);
+    } else {
+      $(validateTweet(text)).show()
+    }
   })
 })
