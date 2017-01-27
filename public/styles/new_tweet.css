@@ -44,7 +44,7 @@
 .character-limit-warning {
   color: red;
 }
-
+/* Hide warning message containers. Show only from result of form validation */
 main .warning {
   color: red;
   display: none;

@@ -37,7 +37,7 @@
   margin-right: 100px;
   padding: 10px;
 }
-
+/* On mouse over: change button background and font colour */
 #nav-bar #compose-button:hover {
   background-color: white;
   color: black;

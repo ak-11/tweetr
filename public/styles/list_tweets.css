@@ -22,17 +22,18 @@
   margin: 0 10px;
   opacity: 0.5;
 }
-
+/* On mouse over: increases opacity of contents inside .tweet container, change border colour and
+font colour. */
 #tweets-container article.tweet:hover {
   border-color: rgb(52, 73, 94);
   color: black;
   opacity: 1;
 }
-
+/* Increases opacity of avatar when mouse hovers over new tweet form/container */
 #tweets-container article.tweet:hover img {
   opacity: 1;
 }
-
+/* Show hidden icons when mouse hovers over new tweet form/container */
 #tweets-container article.tweet:hover .icon {
   opacity: 1;
 }

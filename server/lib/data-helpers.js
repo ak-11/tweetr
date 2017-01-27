@@ -3,7 +3,7 @@
 module.exports = function makeDataHelpers(db) {
   const tweeter = db.collection('tweeter')
   return {
-
+    // Function to insert new posts into the database
     saveTweet: (newTweet, callback) => {
       tweeter.insert(newTweet, (err, result) => {
         if (err) {
@@ -13,7 +13,7 @@ module.exports = function makeDataHelpers(db) {
         db.close;
       })
     },
-
+    // Function to find all posting tweets from the database
     getTweets: (callback) => {
       tweeter.find().toArray((err, result) => {
         if (err) {
