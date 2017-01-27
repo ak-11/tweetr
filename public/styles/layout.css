@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -19,10 +20,12 @@ body {
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
+  height: 100%;
 }
 
 .container {
   width: 520px;
+  min-height: 100%;
   margin: 0 auto;
   background-color: white;
   padding: 100px 0;
@@ -31,3 +34,11 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+/* Responsive Design Media Queries */
+ @media (max-width: 600px) {
+    /* For mobile phones: */
+    .container {
+        width: 100%;
+    }
+}
