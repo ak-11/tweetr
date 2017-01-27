@@ -48,6 +48,7 @@ const renderTweets = (tweets) => {
 const loadTweets = () => {
   $('.warning').hide()
   $('#new-tweet').val('')
+  $('#counter').text(140)
   $('#tweets-container').empty()
   $.ajax({
     url: '/tweets',
