@@ -8,9 +8,11 @@ A simple single-page AJAX-based Twitter clone that uses jQuery, HTML5 and plain 
 This project is starter (incomplete) code for students to fork and clone.
 The server is built with Node and Express and allows users to request and submit tweets via a JSON end-point. The server/express code should not require any change from the student.
 Students must work with and implement the HTML, CSS and client-side JS to bring this project to life.
+
 #### Ajax
   - Can use "ajax" to make asynchronous requests
   - Can use $.ajax to make asynchronous HTTP requests
+
 #### MongoDB
   - Can create a database via the mongo shell
   - Can start the mongo shell with an immediate connection to a database
