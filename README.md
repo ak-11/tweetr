@@ -45,9 +45,7 @@ Students must work with and implement the HTML, CSS and client-side JS to bring 
 3. Start the web server from the command line: `npm run local`
 4. Open the app on <http://localhost:8080/> and make sure that it's loading.
 
-## Dependencies & Troubleshooting
-
-Dependencies:
+## Dependencies
 
 - Express
 - Node 5.10.x or above
